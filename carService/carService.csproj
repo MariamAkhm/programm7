@@ -44,10 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarBrend.cs" />
+    <Compile Include="Employeers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SKODA.cs" />
-    <Compile Include="vehicleInspection.cs" />
+    <Compile Include="Shop.cs" />
+    <Compile Include="SKODA.TOYOTA.cs" />
+    <Compile Include="Another.cs" />
+    <Compile Include="Timetable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
