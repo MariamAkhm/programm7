@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace carService
 {
-    class Another:Employees
+    class Another
     {
         private string mtpl;
         private string vehicleInspection;

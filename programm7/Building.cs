@@ -8,73 +8,73 @@ namespace programm7
 {
         class Building
         {
-            private static int uniq_num = 1;
+            private static int uniqNumber = 1;
             private int number;
             private int height;
-            private int count_floors;
-            private int count_apartments;
-            private int count_entrances;
-            public void FillIn(int number, int height, int count_floors, int count_apartments, int count_entrances)
+            private int countOfFloors;
+            private int countOfApartments;
+            private int countOfEntrances;
+            public void FillIn(int number, int height, int countOfFloors, int countOfApartments, int countOfEntrances)
             {
                 this.number = number;
                 this.height = height;
-                this.count_floors = count_floors;
-                this.count_apartments = count_apartments;
-                this.count_entrances = count_entrances;
+                this.countOfFloors = countOfFloors;
+                this.countOfApartments = countOfApartments;
+                this.countOfEntrances = countOfEntrances;
             }
             public static int UniqNumber()
             {
-                return uniq_num++;
+                return uniqNumber++;
             }
-            public double HeightFloor(double height, double count_floors)
+            public double HeightFloor(double height, double countOfFloors)
             {
-                double height_floor;
-                if (count_floors != 0)
+                double heightOfFloors;
+                if (countOfFloors != 0)
                 {
-                    height_floor = height / count_floors;
+                    heightOfFloors = height / countOfFloors;
                 }
                 else
                 {
-                    height_floor = height;
+                    heightOfFloors = height;
                 }
-                return height_floor;
+                return heightOfFloors;
             }
-            public int CountApartmentsInEntrance(int count_apartments, int count_entrsnces)
+            public int CountApartmentsInEntrance(int countOfApartments, int countOfEntrances)
             {
-                int apart_entrance;
-                if (count_entrsnces != 0)
+                int apartOfEntrances;
+                if (countOfEntrances != 0)
                 {
-                    apart_entrance = count_apartments / count_entrsnces;
+                    apartOfEntrances = countOfApartments / countOfEntrances;
                 }
                 else
                 {
-                    apart_entrance = count_apartments;
+                    apartOfEntrances = countOfApartments;
                 }
-                return apart_entrance;
+                return apartOfEntrances;
             }
-            public int CountApartmentsOnFloor(int count_apartments, int count_floors)
+            public int CountApartmentsOnFloor(int countOfApartments, int countOfFloors)
             {
-                int apat_floor;
-                if (count_floors != 0)
+                int apartOfFloors;
+                if (countOfFloors != 0)
                 {
-                    apat_floor = count_apartments / count_floors;
+                    apartOfFloors = countOfApartments / countOfFloors;
                 }
                 else
                 {
-                    apat_floor = count_apartments;
+                    apartOfFloors = countOfApartments;
                 }
-                return apat_floor;
+                return apartOfFloors;
             }
             public void PrintValues()
             {
-                Console.WriteLine($"Номер здания: {number}");
-                Console.WriteLine($"Высота здания: {height}");
-                Console.WriteLine($"Кол-во этажей в здании: {count_floors}");
-                Console.WriteLine($"Кол-во квартир в здании: {count_apartments}");
-                Console.WriteLine($"Кол-во подъездов в здании: {count_entrances}");
-                Console.WriteLine($"Высота одного этажа: {HeightFloor(height, count_floors)}");
-                Console.WriteLine($"Кол-во квартир в подъезде: {CountApartmentsInEntrance(count_apartments, count_entrances)}");
-                Console.WriteLine($"Кол-во квартир на этаже: {CountApartmentsOnFloor(count_apartments, count_floors)}");
+                Console.WriteLine("Номер здания"+ number);
+                Console.WriteLine("Высота здания"+ height);
+                Console.WriteLine("Кол-во этажей в здании"+ countOfFloors);
+                Console.WriteLine("Кол-во квартир в здании"+ countOfApartments);
+                Console.WriteLine("Кол-во подъездов в здании" +countOfEntrances);
+                Console.WriteLine("Высота одного этажа"+ HeightFloor(height, countOfFloors));
+                Console.WriteLine("Кол-во квартир в подъезде" +CountApartmentsInEntrance(countOfApartments, countOfEntrances));
+                Console.WriteLine("Кол-во квартир на этаже" +CountApartmentsOnFloor(countOfApartments, countOfFloors));
             }
         }
     }

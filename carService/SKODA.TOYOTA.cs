@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.IO;
+using System.Threading;
 
 namespace carService
 {
@@ -45,7 +45,7 @@ namespace carService
             }
             private set { }
         }
-        public void RepairOnTheEngine()
+        public void RepairOnTheEngine() 
         {
             Console.WriteLine("Нужна ли замена/починка двигателя?да/нет");
             engine = Console.ReadLine().ToLower();
@@ -99,6 +99,7 @@ namespace carService
                 Console.WriteLine(" ");
             }
         }
+        Painting carPaint = new Painting();
         public void CarPaint()
         {
             Console.WriteLine("Нужна ли покраска авто?да/нет");
@@ -110,7 +111,7 @@ namespace carService
             }
             if (painting.Equals("да"))
             {
-                Console.WriteLine("Машина будет покрашена, ожидайте!");
+                carPaint.CarPainting();
             }
             else if (refuelingOfAirConditioners.Equals("нет"))
             {

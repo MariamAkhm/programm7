@@ -87,24 +87,24 @@ namespace programm7
                     Console.WriteLine("Неверный ввод, попробуйте еще раз");
                 }
                 Console.WriteLine("Введите кол-во этажей в здании");
-                int count_floors;
-                while (!int.TryParse(Console.ReadLine(), out count_floors))
+                int countOfFloors;
+                while (!int.TryParse(Console.ReadLine(), out countOfFloors))
                 {
                     Console.WriteLine("Неверный ввод, попробуйте еще раз");
                 }
                 Console.WriteLine("Введите кол-во квартир в здании");
-                int count_apat;
-                while (!int.TryParse(Console.ReadLine(), out count_apat))
+                int countApart;
+                while (!int.TryParse(Console.ReadLine(), out countApart))
                 {
                     Console.WriteLine("Неверный ввод, попробуйте еще раз");
                 }
                 Console.WriteLine("Введите кол-во подъездов в здании");
-                int count_entr;
-                while (!int.TryParse(Console.ReadLine(), out count_entr))
+                int countEnter;
+                while (!int.TryParse(Console.ReadLine(), out countEnter))
                 {
                     Console.WriteLine("Неверный ввод, попробуйте еще раз");
                 }
-                building.FillIn(number, height, count_floors, count_apat, count_entr);
+                building.FillIn(number, height, countOfFloors, countApart, countEnter);
                 building.PrintValues();
                 count++;
                 if (count1 == 3)

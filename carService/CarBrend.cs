@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace carService
 {
-    class CarBrend
+    abstract class CarBrend
     {
-       
+        private string name;
+        public string Name()
+        {
+            return name;
+        }
     }
+
 }

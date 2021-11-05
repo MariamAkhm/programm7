@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace programm7
 {
@@ -12,7 +13,7 @@ namespace programm7
             private long number;
             private decimal balance;
             private AccountType accountType;
-            private static long uniq_num;
+            private static long uniqNum;
 
             public void FillIn(long number, decimal balance)
             {
@@ -21,7 +22,7 @@ namespace programm7
             }
             public static long UniqNumber()
             {
-                return uniq_num++;
+                return uniqNum++;
             }
             public AccountType Type()
             {
@@ -43,9 +44,9 @@ namespace programm7
             }
         public void PrintValues()
             {
-            Console.WriteLine($"Account number: {number}");
-            Console.WriteLine($"Account balance: {balance}");
-            Console.WriteLine($"Account type: {accountType}");
+            Console.WriteLine("Account number" +number);
+            Console.WriteLine("Account balance" +balance);
+            Console.WriteLine("Account type" +accountType);
             }
         }
     }
